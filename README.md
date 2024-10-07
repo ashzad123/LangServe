@@ -26,3 +26,43 @@ The user interface is created using **Streamlit**, which allows users to interac
 - **Ollama (Llama2 model)**: A large language model provided by the Langchain community.
 - **Streamlit**: A web framework for creating interactive, data-driven applications.
 - **Uvicorn**: A lightning-fast ASGI server used to run FastAPI.
+
+
+## Installation
+
+### Prerequisites
+- Python 3.8+
+- Pipenv or any other package manager
+
+### Steps
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ashzad123/LangServe.git
+    cd LangServe
+    ```
+
+2. Create and activate a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate 
+     # On Windows, use 
+    venv\Scripts\activate
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Create a `.env` file in the root of the project and add any required environment variables (e.g., API keys for language models).
+
+5. Run the FastAPI server:
+    ```bash
+    uvicorn app:app --reload --host 127.0.0.1 --port 3535
+    ```
+
+6. Run the Streamlit client:
+    ```bash
+    streamlit run client.py
+    ```
