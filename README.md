@@ -59,7 +59,7 @@ The user interface is created using **Streamlit**, which allows users to interac
 
 5. Run the FastAPI server:
     ```bash
-    uvicorn app:app --reload --host 127.0.0.1 --port 3535
+    python app.py
     ```
 
 6. Run the Streamlit client:
