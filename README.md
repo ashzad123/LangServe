@@ -66,3 +66,40 @@ The user interface is created using **Streamlit**, which allows users to interac
     ```bash
     streamlit run client.py
     ```
+
+## Usage
+
+Once everything is set up:
+
+1. **Start the FastAPI server** using Uvicorn by running the `app.py` file.
+2. **Access the Streamlit app** by running `client.py`. It provides an interactive web interface where you can:
+   - Enter a topic to generate a 1000-word essay.
+   - Enter a topic to generate a 200-word poem.
+
+## Endpoints
+
+The API has the following main routes:
+
+- `/ollama`: This endpoint interacts with the Ollama LLM.
+  
+- `/essay`: Accepts a topic as input and returns a detailed 1000-word essay.
+  - **Method**: POST
+  - **Request body**:
+    ```json
+    {
+      "input": {
+        "topic": "Your Topic Here"
+      }
+    }
+    ```
+  
+- `/poem`: Accepts a topic as input and returns a 200-word poem.
+  - **Method**: POST
+  - **Request body**:
+    ```json
+    {
+      "input": {
+        "topic": "Your Topic Here"
+      }
+    }
+    ```
